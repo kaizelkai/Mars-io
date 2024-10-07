@@ -1,0 +1,112 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: var(--forest-7);
+}
+
+/* Define font styles */
+.sp_font-sixtyfour {
+    font-family: 'SixtyFour', 'Inter', sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+
+.sp_font-racingone {
+    font-family: "Racing Sans One", 'Inter', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Adjust slider width for larger screens */
+@media screen and (min-width: 1280px) {
+    .sp_slider-embed {
+        width: 40rem;
+    }
+}
+
+/* Adjust bullet wrapper width for different screen sizes */
+.swiper-bullet-wrapper.is-sp-slider {
+    width: 5% !important; /* Default width */
+}
+
+@media (max-width: 991px) {
+    .swiper-bullet-wrapper.is-sp-slider {
+        width: 10% !important; /* Adjusted width for medium-sized screens */
+    }
+}
+
+@media (max-width: 670px) {
+    .swiper-bullet-wrapper.is-sp-slider {
+        width: 20% !important; /* Adjusted width for small screens */
+    }
+}
+.sp_slider-wrapper {
+    display: flex; /* Utilisez flexbox pour aligner les côtés du slider */
+    overflow: hidden; /* Empêche le débordement des éléments */
+}
+
+.swiper {
+    width: 100%; /* S'assure que le swiper prend toute la largeur */
+    height: 100%; /* S'assure que le swiper prend toute la hauteur */
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+.sp_section-character{
+    margin: 36px;
+}
+
+
+.sp_benefit-card-reflection:hover {
+    opacity: 2;
+    background-image: linear-gradient(135deg,#fff,#fff0 15%,#fff 52%,#fff0 85%,#fff);
+    border-radius: 1rem;
+    position: absolute;
+    inset: 0%;
+    transition: opacity 0.3s ease-in-out;
+}
+.sp_large-text-wrapper {
+    transition: transform 0.2s ease-out;
+}
+
+.mars, .future {
+    transform: translateX(0); /* Position de départ pour Mars et Future */
+}
+
+.crypto, .elon {
+    transform: translateX(0); /* Position de départ pour Crypto et Elon */
+}
+
+.parallax {
+    
+    transition: transform 0.2s ease-out; /* Doucement lorsqu'on remonte */
+}
+
+.hidden {
+    display: none; /* Cache l'élément */
+}
+
+.visible {
+    display: block; /* Affiche l'élément */
+    opacity: 0; /* Commence par être transparent */
+    transition: opacity 0.5s ease; /* Transition de l'opacité pour une animation fluide */
+}
+
+/* Ajoutez une classe pour faire apparaître l'élément */
+.fade-in {
+    opacity: 1; /* Devient opaque */
+}
